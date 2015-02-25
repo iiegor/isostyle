@@ -28,10 +28,10 @@
 			element = document.createElement('style');
 			element.type = 'text/css';
 			element.setAttribute(tagName, id);
-            
-            document.getElementsByTagName('head')[0].appendChild(element);
 
-            element.styleSheet ? element.styleSheet.cssText = style : element.appendChild(document.createTextNode(style));
+			document.getElementsByTagName('head')[0].appendChild(element);
+
+			element.styleSheet ? element.styleSheet.cssText = style : element.appendChild(document.createTextNode(style));
 		}
 
 		return function() {

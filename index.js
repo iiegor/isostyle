@@ -41,7 +41,7 @@ module.exports = function(src) {
 			var bundle = "var o = require(\"isostyle/isostyle\"), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + Math.random().toString(16) + "\");";
 
 			self.push(bundle);
-            self.push(null);
+			self.push(null);
 			done();
 		});
 	});
