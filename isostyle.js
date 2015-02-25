@@ -41,5 +41,5 @@
 
 	module.exports = insert;
 }).call(exports, function() {
-	return this;
-});
+	return this
+}());
