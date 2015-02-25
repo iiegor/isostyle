@@ -15,6 +15,7 @@
   "repository": "https://github.com/underc0de/isostyle",
   "license": "MIT",
   "dependencies": {
-    "less": "^2.4.0"
+    "less": "^2.4.0",
+    "through2": "^0.6.3"
   }
 }
