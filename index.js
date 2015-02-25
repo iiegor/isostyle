@@ -7,7 +7,8 @@ module.exports = function(src) {
 		return through();
 	}
 
-	if (/\.less$/.test(src)) console.info('Compiling: ' + src);
+	// Output path for less files while compiling
+	if (/\.less$/.test(src)) console.info(src);
 
 	var buffer = '';
 	var dir = path.dirname(src);
@@ -37,9 +38,9 @@ module.exports = function(src) {
 				done(new Error(msg, file, e.line));
 			}
 
-			var compiled = "module.exports = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\";";
+			var bundle = "var o = require(\"isostyle/isostyle\"), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + Math.random().toString(16) + "\");";
 
-			self.push(compiled);
+			self.push(bundle);
             self.push(null);
 			done();
 		});
