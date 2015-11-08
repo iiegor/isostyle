@@ -1,8 +1,9 @@
 # isostyle [![Build Status](https://travis-ci.org/iiegor/isostyle.svg?branch=master)](https://travis-ci.org/iiegor/isostyle)
-> Advanced LESS precompiler and CSS plugin for Browserify v2
 
-With isostyle you can use the require() function also with CSS and LESS files.
-Note that when you use the require function, automatically it will add the stylesheet to the dom with an identifier (data-isostyle-id).
+**isostyle** allows you to require CSS and LESS files using browserify.
+When you require a stylesheet, isostyle will automatically add it to the dom with an identifier (data-isostyle-id) based on the integrity of the file so it will be unique.
+
+An example application using **isostyle** is [Instagram](https://instagram.com/).
 
 ## Installation
 ```sh
@@ -33,6 +34,3 @@ browserify: {
   }
 }
 ```
-
-## Examples
-An example of an application using **isostyle** is [Instagram](https://instagram.com/).
