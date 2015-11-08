@@ -2,6 +2,12 @@
   "name": "isostyle",
   "version": "0.1.3",
   "description": "LESS precompiler and CSS plugin.",
+  "author": "Iegor Azuaga <dextrackmedia@gmail.com>",
+  "main": "./index.js",
+  "browser": "./browser.js",
+  "scripts": {
+    "test": "tap spec/*.js"
+  },
   "keywords": [
     "browserify",
     "npm",
@@ -10,12 +16,16 @@
     "less",
     "plugin"
   ],
-  "main": "index.js",
-  "author": "iegormundo@hotmail.com",
-  "repository": "https://github.com/underc0de/isostyle",
-  "license": "MIT",
   "dependencies": {
     "less": "^2.4.0",
     "through2": "^0.6.3"
+  },
+  "repository": "https://github.com/iiegor/isostyle",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "concat-stream": "^1.5.1",
+    "jsdom": "^7.0.2",
+    "tap": "^2.2.0"
   }
 }

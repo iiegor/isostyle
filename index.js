@@ -14,7 +14,7 @@ module.exports = function(src) {
 	var dir = path.dirname(src);
 
 	return through(function(chunk, enc, next) {
-		buffer += chunk.toString();
+		buffer += chunk;
 		next();
 	}, function(done) {
 		var self = this;
@@ -38,7 +38,7 @@ module.exports = function(src) {
 				done(new Error(msg, file, e.line));
 			}
 
-			var bundle = "var o = require(\"isostyle/isostyle\"), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + Math.random().toString(16) + "\");";
+			var bundle = "var o = require(" + JSON.stringify('isostyle/browser') + "), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + Math.random().toString(16) + "\");";
 
 			self.push(bundle);
 			self.push(null);
