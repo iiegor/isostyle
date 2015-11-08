@@ -1,4 +1,4 @@
-# isostyle
+# isostyle [![Build Status](https://travis-ci.org/iiegor/isostyle.svg?branch=master)](https://travis-ci.org/iiegor/isostyle)
 > Advanced LESS precompiler and CSS plugin for Browserify v2
 
 With isostyle you can use the require() function also with CSS and LESS files.
