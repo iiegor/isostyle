@@ -1,6 +1,6 @@
 # isostyle [![Build Status](https://travis-ci.org/iiegor/isostyle.svg?branch=master)](https://travis-ci.org/iiegor/isostyle)
 
-**isostyle** allows you to require CSS and LESS files using browserify.
+Browserify transform that allows you to require CSS and LESS files using browserify.
 When you require a stylesheet, isostyle will automatically add it to the dom with an identifier (data-isostyle-id) based on the integrity of the file so it will be unique.
 
 An example application using **isostyle** is [Instagram](https://instagram.com/).
