@@ -25,12 +25,15 @@ module.exports = function(src) {
 		}, function(e, output) {
 			if (e) {
 				var msg = e.message;
+
 				if (e.line) {
 					msg += ", line " + e.line;
 				}
+
 				if (e.column) {
 					msg += ", column " + e.column;
 				}
+
 				if (e.extract) {
 					msg += ": \"" + e.extract + "\"";
 				}
