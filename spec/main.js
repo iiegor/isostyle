@@ -33,6 +33,7 @@ test('load style sheet', function (t) {
         var $head = $('head > style');
 
         t.equal(1, $head.length);
+        t.equal('body{color:red}', $head[0].innerHTML);
 
         t.end();
       }
