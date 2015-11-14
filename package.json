@@ -1,6 +1,6 @@
 {
   "name": "isostyle",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "LESS precompiler and CSS plugin.",
   "author": "Iegor Azuaga <dextrackmedia@gmail.com>",
   "main": "./index.js",
