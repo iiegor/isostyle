@@ -32,8 +32,9 @@ test('load style sheet', function (t) {
         var $ = window.jQuery;
         var $head = $('head > style');
 
-        t.equal(1, $head.length);
+        t.equal(2, $head.length);
         t.equal('body{color:red}', $head[0].innerHTML);
+        t.equal('body{color:blue}', $head[1].innerHTML);
 
         t.end();
       }
