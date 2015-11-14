@@ -41,7 +41,7 @@ module.exports = function(src) {
 				done(new Error(msg, file, e.line));
 			}
 
-			var bundle = "var o = require(" + JSON.stringify('isostyle/browser') + "), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + Math.random().toString(16) + "\");";
+			var bundle = "var o = require(" + JSON.stringify('isostyle/browser') + "), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + (Math.floor(Math.random() * 1e13) + new Date().getMilliseconds()).toString(36) + "\");";
 
 			self.push(bundle);
 			self.push(null);
