@@ -8,7 +8,7 @@ An example application using **isostyle** is [Instagram](https://instagram.com/)
 ## Installation
 
 ```sh
-$ npm install isostyle
+$ npm i --save isostyle
 ```
 
 ## Usage
