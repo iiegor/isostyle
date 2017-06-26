@@ -44,7 +44,7 @@ module.exports = function(src) {
 
 			var identifier = shortid.generate().toLowerCase();
 			var bundle = "var isostyle = require(" + JSON.stringify('isostyle/browser') + "), style = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; isostyle(style, \"is-" + identifier + "\");";
-			
+
 			self.push(bundle);
 			self.push(null);
 			done();
