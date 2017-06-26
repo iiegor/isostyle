@@ -1,7 +1,7 @@
 # isostyle [![Build Status](https://travis-ci.org/iiegor/isostyle.svg?branch=master)](https://travis-ci.org/iiegor/isostyle)
 
 Browserify transform that allows you to require CSS and LESS files.
-When you require a StyleSheet, ``isostyle`` will automatically append it to the ``head`` of the document with a unique identifier *(data-isostyle-id)* based on the integrity of the file.
+When you require a StyleSheet, ``isostyle`` will automatically append it to the ``head`` of the document with a unique identifier *(data-isostyle-id)*.
 
 An example application using **isostyle** is [Instagram](https://instagram.com/).
 
