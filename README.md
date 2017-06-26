@@ -18,7 +18,7 @@ require('stylesheet.less');
 require('stylesheet.css');
 ```
 
-Compile with browserify using -t isostyle:
+Compile with browserify using ``-t isostyle``:
 
 ```sh
 $ browserify -t isostyle main.js > bundle.js
