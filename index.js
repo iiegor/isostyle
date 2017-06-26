@@ -1,6 +1,7 @@
 var path = require('path');
 var through = require('through2');
 var less = require('less');
+var shortid = require('shortid');
 
 module.exports = function(src) {
 	if (!/\.css$|\.less$/.test(src)) {
@@ -41,8 +42,9 @@ module.exports = function(src) {
 				done(new Error(msg, file, e.line));
 			}
 
-			var bundle = "var o = require(" + JSON.stringify('isostyle/browser') + "), r = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; o(r, \"is-" + (Math.floor(Math.random() * 1e13) + new Date().getMilliseconds()).toString(36) + "\");";
-
+			var identifier = shortid.generate().toLowerCase();
+			var bundle = "var isostyle = require(" + JSON.stringify('isostyle/browser') + "), style = \"" + output.css.replace(/'/g, "\\'").replace(/"/g, '\\"') + "\"; isostyle(style, \"is-" + identifier + "\");";
+			
 			self.push(bundle);
 			self.push(null);
 			done();

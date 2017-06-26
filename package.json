@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "less": "^2.4.0",
+    "shortid": "^2.2.8",
     "through2": "^0.6.3"
   },
   "devDependencies": {
